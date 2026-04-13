@@ -1,6 +1,6 @@
 # Financial Analytics Data Pipeline with Scratch ML
 
-An end-to-end student project that combines data cleaning, SQL storage, feature engineering, machine learning from scratch, and interactive visualization on a financial fraud dataset.
+An end-to-end academic project that combines data cleaning, SQL storage, feature engineering, machine learning from scratch, and interactive visualization on a financial fraud dataset.
 
 This project uses the credit card fraud detection dataset to show the full workflow from raw data to model evaluation. 
 
