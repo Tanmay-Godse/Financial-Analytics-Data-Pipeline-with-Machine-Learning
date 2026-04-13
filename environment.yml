@@ -1,0 +1,8 @@
+name: project_1
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -e .

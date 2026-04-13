@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-analytics-data-pipeline"
+version = "0.1.0"
+description = "End-to-end financial analytics pipeline using the Kaggle credit card fraud dataset with SQL storage, from-scratch ML, and live-refreshable reporting."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Tanmay Godse" }
+]
+dependencies = [
+  "kaggle>=1.7.4",
+  "matplotlib>=3.9.0",
+  "numpy>=2.1.0",
+  "pandas>=2.2.0",
+  "plotly>=6.0.0",
+  "pyarrow>=19.0.0",
+  "pytest>=8.3.0",
+  "scikit-learn>=1.6.0",
+  "seaborn>=0.13.2",
+]
+
+[project.scripts]
+fap-run-pipeline = "financial_analytics_pipeline.orchestrator:run_data_pipeline_cli"
+fap-train-models = "financial_analytics_pipeline.orchestrator:run_training_cli"
+fap-refresh-dashboard = "financial_analytics_pipeline.orchestrator:run_refresh_cli"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
